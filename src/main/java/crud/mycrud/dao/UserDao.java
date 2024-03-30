@@ -7,4 +7,5 @@ import crud.mycrud.model.User;
 public interface UserDao {
    void add(User user);
    List<User> listUsers();
+   User getUserById(int id);
 }
