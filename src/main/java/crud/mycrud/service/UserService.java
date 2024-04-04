@@ -9,4 +9,6 @@ public interface UserService {
     User getUserById(int id);
 
 	List<User> getAllUsers();
+
+	void save(User user);
 }
