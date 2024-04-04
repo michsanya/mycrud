@@ -1,11 +1,12 @@
 package crud.mycrud.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 import crud.mycrud.model.User;
 
 
 public interface UserDao {
    void add(User user);
-   List<User> listUsers();
    User getUserById(int id);
+   List<User> getAllUsers();
 }

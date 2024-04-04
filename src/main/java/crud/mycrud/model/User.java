@@ -9,15 +9,15 @@ import javax.persistence.Id;
 import org.hibernate.annotations.Table;
 
 @Entity
-@Table(appliesTo = "Users")
+@Table(appliesTo = "User")
 public class User {
 	@Id()
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
 	private int id;
-	@Column(name = "Name")
+	@Column(name = "name")
 	private String name;
-	@Column(name = "Lastname")
+	@Column(name = "lastname")
 	private String lastname;
 	public int getId() {
 		return id;
