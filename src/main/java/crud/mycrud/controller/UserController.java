@@ -9,11 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import crud.mycrud.model.User;
 import crud.mycrud.service.UserService;
@@ -53,4 +49,17 @@ public class UserController {
 		userService.save(user);
 		return "redirect:/";
 	}
+
+	@GetMapping("/{id}/edit")
+	public String edit(@PathVariable("id") int id, ModelMap model){
+		model.addAttribute("user", userService.getUserById(id) );
+		return "edit";
+	}
+
+	@PatchMapping("/{id}")
+	public String update(@ModelAttribute("user") User user, @PathVariable("id") int id){
+		userService.updateUser(id, user);
+		return "redirect:/";
+	}
+
 }

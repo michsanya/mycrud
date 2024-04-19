@@ -48,4 +48,8 @@ public class User {
 	public String toString() {
 		return "User " +  name+ " " + lastname;
 	}
+
+    public void setId(int id) {
+		this.id = id;
+    }
 }

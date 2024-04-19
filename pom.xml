@@ -57,10 +57,11 @@
 		<!-- Servlet Spec -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.4</version>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+
 		
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
@@ -97,6 +98,11 @@
             <artifactId>thymeleaf-spring5</artifactId>
             <version>3.0.14.RELEASE</version>
         </dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-core</artifactId>
+			<version>7.0.47</version>
+		</dependency>
     </dependencies>
 
 	<repositories>

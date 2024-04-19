@@ -28,4 +28,13 @@ public class UserServiceImpl implements UserService{
 	public void save(User user) {
 		userDao.save(user);
 	}
+
+	@Override
+	public void updateUser(int id, User user) {
+		User updatedUser = userDao.getUserById(id);
+		updatedUser.setName(user.getName());
+		updatedUser.setLastname(user.getLastname());
+		updatedUser.setId(user.getId());
+		userDao.save(updatedUser);
+	}
 }
